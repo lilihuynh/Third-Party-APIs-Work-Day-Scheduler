@@ -24,4 +24,17 @@ $(document).ready(function () {
     //retrieve todoList
     var savedList = JSON.parse(localStorage.getItem("todoList"));
 
+    // test if there is values in savedList
+    if (savedList) { //if savedList is truthy meaning there is something in the savedList
+        todoList = savedList;
+        console.log("todos saved")
+        //paint retrieved 'todos' from todoList to textarea HTML
+        for (var i = 0; i < todoList.length; i++) {
+          console.log(todoList[i]);
+          $("#" + todoList[i].hours).text(todoList[i].todos); //
+        }
+      } else { //else if savedList falsy meaning savedList is empty
+        console.log("no todos")
+      }
+
 })
