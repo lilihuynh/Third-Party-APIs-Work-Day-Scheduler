@@ -28,7 +28,7 @@ $(document).ready(function () {
     if (savedList) { //if savedList is truthy meaning there is something in the savedList
         todoList = savedList;
         console.log("todos saved")
-        //paint retrieved 'todos' from todoList to textarea HTML
+        //paint retrieved 'todos' from todoList to textarea HTML accordingly to its 'hours'
         for (var i = 0; i < todoList.length; i++) {
           console.log(todoList[i]);
           $("#" + todoList[i].hours).text(todoList[i].todos); //
