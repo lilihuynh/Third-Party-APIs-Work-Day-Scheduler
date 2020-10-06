@@ -21,4 +21,7 @@ $(document).ready(function () {
         localStorage.setItem("todoList", JSON.stringify(todoList));
     })
 
+    //retrieve todoList
+    var savedList = JSON.parse(localStorage.getItem("todoList"));
+
 })
