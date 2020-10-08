@@ -51,7 +51,7 @@ $(document).ready(function () {
         $(".textarea").addClass("present");
 
       } else {
-        $(this).addClass("future");
+        $(".textarea").addClass("future");
       }
 
     });
