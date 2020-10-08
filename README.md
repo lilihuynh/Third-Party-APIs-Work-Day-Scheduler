@@ -17,7 +17,7 @@ Github-page: [https://lillianhuynh.github.io/Third-Party-APIs-Work-Day-Scheduler
 * [Contact](#contact)
 
 ## About The Project
-![Project Screenshot](images/.png)
+![Project Screenshot](images/screenshot.png)
 
 The 'Work Day Scheduler' calendar application allows users to add important events to a daily planner. It helps users to manage their time more effectively. 
 
