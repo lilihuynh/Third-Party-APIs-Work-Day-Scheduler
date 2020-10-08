@@ -40,22 +40,30 @@ $(document).ready(function () {
   // compare scheduled time with current time to change color for each time block
   //grey: past, present: red, future: green
   function hourOperator() {
+  
     var currentHour = moment().hour();
     $(".hour").each(function () {
+    
       var scheduleHour = parseInt($(this).attr("id"));
-
+  
       if (scheduleHour < currentHour) {
-        $(".textarea").addClass("past");
-
+        $(this).next().removeClass("present");
+        $(this).next().removeClass("future");
+        $(this).next().addClass("past");
+  
       } else if (scheduleHour === currentHour) {
-        $(".textarea").addClass("present");
-
+        $(this).next().removeClass("past");
+        $(this).next().removeClass("future");
+        $(this).next().addClass("present");
+  
       } else {
-        $(".textarea").addClass("future");
+        $(this).next().removeClass("present");
+        $(this).next().removeClass("past");
+        $(this).next().addClass("future");
       }
-
+  
     });
-
+  
   }
   hourOperator();
 })
